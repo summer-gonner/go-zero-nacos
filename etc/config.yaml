@@ -1,0 +1,26 @@
+Server:
+  Port: 8080
+Application:
+  Name: "helment-basicdata"
+
+Nacos:
+  Discovery:
+    Ip: "127.0.0.1"
+    Port: 8848
+    Namespace: "39964dd3-0717-4ef3-ba93-2fe865c6aa86"
+    Group: "DEFAULT_GROUP"
+    ServiceName: "elment-basicdata"
+    Username: "nacos"
+    Password: "nacos"
+  Config:
+    Ip: "127.0.0.1"
+    Port: 8848
+    Namespace: "39964dd3-0717-4ef3-ba93-2fe865c6aa86"
+    Group: "DEFAULT_GROUP"
+    Service_Name: "elment-basicdata"
+    Username: "nacos"
+    Password: "nacos"
+    FileExtension: "yaml"
+    DataID: "application.yml"
+
+
