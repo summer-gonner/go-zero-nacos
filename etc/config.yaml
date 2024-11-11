@@ -1,26 +1,28 @@
-Server:
-  Port: 8080
-Application:
-  Name: "helment-basicdata"
-
 Nacos:
+  Ip: "127.0.0.1"
+  Port: 8848
+  Username: "nacos"
+  Password: "nacos"
+  TimeoutMs: 50000
+  NotLoadCacheAtStart: true
   Discovery:
-    Ip: "127.0.0.1"
-    Port: 8848
     Namespace: "39964dd3-0717-4ef3-ba93-2fe865c6aa86"
     Group: "DEFAULT_GROUP"
     ServiceName: "elment-basicdata"
-    Username: "nacos"
-    Password: "nacos"
   Config:
     Ip: "127.0.0.1"
     Port: 8848
-    Namespace: "39964dd3-0717-4ef3-ba93-2fe865c6aa86"
-    Group: "DEFAULT_GROUP"
-    Service_Name: "elment-basicdata"
     Username: "nacos"
     Password: "nacos"
+    Namespace: "39964dd3-0717-4ef3-ba93-2fe865c6aa86"
     FileExtension: "yaml"
-    DataID: "application.yml"
+    SharedConfigs:
+       - DataID: "k8s.yaml"
+         Group: "DEFAULT_GROUP"
+         refresh: true
+       - DataID: "applicaiton.yaml"
+         Group: "DEFAULT_GROUP"
+         refresh: true
+
 
 
