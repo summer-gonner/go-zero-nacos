@@ -1,11 +1,11 @@
 Nacos:
-  Ip: "127.0.0.1"
-  Port: 8848
-  Username: "nacos"
-  Password: "nacos"
-  TimeoutMs: 50000
-  NotLoadCacheAtStart: true
   Discovery:
+    Ip: "127.0.0.1"
+    Port: 8848
+    Username: "nacos"
+    Password: "nacos"
+    TimeoutMs: 50000
+    NotLoadCacheAtStart: true
     Namespace: "39964dd3-0717-4ef3-ba93-2fe865c6aa86"
     Group: "DEFAULT_GROUP"
     ServiceName: "elment-basicdata"
@@ -16,6 +16,7 @@ Nacos:
     Password: "nacos"
     Namespace: "39964dd3-0717-4ef3-ba93-2fe865c6aa86"
     FileExtension: "yaml"
+    TimeoutMs: 5000
     SharedConfigs:
        - DataID: "k8s.yaml"
          Group: "DEFAULT_GROUP"

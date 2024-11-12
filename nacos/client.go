@@ -52,7 +52,7 @@ func InitNacosConfigClient(nacosConf conf.NacosConf) error {
 			Port:   uint64(nacosConf.Discovery.Port),
 		},
 	}
-	nacosConfigClient, err := clients.NewConfigClient(
+	_, err := clients.NewConfigClient(
 		vo.NacosClientParam{
 			ServerConfigs: serverConfig,
 			ClientConfig:  &clientConfig,

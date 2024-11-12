@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"github.com/summer-gonner/go-zero-nacos/config"
+	conf2 "github.com/summer-gonner/go-zero-nacos/conf"
 	"github.com/summer-gonner/go-zero-nacos/nacos"
 	"github.com/zeromicro/go-zero/core/conf"
 )
@@ -10,8 +10,11 @@ import (
 var configFile = flag.String("f", "etc/config.yaml", "the config file")
 
 func main() {
-	var cfg config.Config
+	var cfg conf2.NacosConfig
 	conf.MustLoad(*configFile, &cfg)
 	//log.Printf("结果%s\n", cfg.Application.Name)
-	nacos.InitNacosDiscoveryClient(cfg.Nacos.Discovery)
+	err := nacos.InitNacosDiscoveryClient(cfg.Nacos)
+	if err != nil {
+		return
+	}
 }
