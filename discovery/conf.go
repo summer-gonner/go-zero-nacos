@@ -1,4 +1,4 @@
-package conf
+package discovery
 
 type NacosDiscoveryConf struct {
 	Ip                  string

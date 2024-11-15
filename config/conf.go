@@ -1,4 +1,4 @@
-package conf
+package config
 
 type NacosConfigConf struct {
 	Ip            string
